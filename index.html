@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DWCP Foundation Diagnostic: ₦10,000</title>
+<title>DWCP Foundation Diagnostic — ₦10,000</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -16,11 +16,12 @@
     --white: #FFFFFF; --offWhite: #FAFAFA; --body: #1A1A1A; --muted: #555555;
   }
   h1, h2, h3, h4 { font-family: 'Arial', sans-serif; line-height: 1.25; }
-  p { margin-bottom: 1.15em; }
+  p { margin-bottom: 1.1em; }
   p:last-child { margin-bottom: 0; }
   .container { max-width: 840px; margin: 0 auto; padding: 0 24px; }
   .container--wide { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
 
+  /* ── BUTTON ── */
   .btn {
     display: inline-block; font-family: 'Arial', sans-serif; font-weight: 700;
     font-size: 1.05rem; background: var(--gold); color: var(--navy);
@@ -35,14 +36,28 @@
   .btn--dark { background: var(--navy); color: var(--gold); border: 2px solid var(--gold); }
   .btn--dark:hover { background: var(--gold); color: var(--navy); }
 
+  /* ── QUIZ BANNER ── */
   .quiz-banner {
-    background: #0f2318; border-bottom: 1px solid rgba(201,168,76,0.3);
-    padding: 14px 24px; text-align: center;
+    background: #0f2318;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding: 16px 24px;
+    text-align: center;
   }
-  .quiz-banner p { color: #c9a84c; font-family: 'Arial', sans-serif; font-size: 0.88rem; letter-spacing: 0.03em; margin: 0; }
-  .quiz-banner a { color: #e8c46a; text-decoration: underline; font-weight: 700; }
+  .quiz-banner p {
+    color: #c9a84c;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+  .quiz-banner a {
+    color: #e8c46a;
+    text-decoration: underline;
+    font-weight: 700;
+  }
   .quiz-banner a:hover { color: #fff; }
 
+  /* ── NAV ── */
   nav {
     background: var(--navy); border-bottom: 2px solid var(--gold);
     padding: 16px 24px; display: flex; align-items: center;
@@ -51,44 +66,52 @@
   .nav-brand { font-family: 'Arial', sans-serif; font-weight: 900; font-size: 1.4rem; color: var(--gold); text-decoration: none; letter-spacing: 0.05em; }
   .nav-cta { font-size: 0.9rem; padding: 10px 22px; }
 
+  /* ── HERO ── */
   .hero { background: var(--navy); padding: 90px 24px 80px; text-align: center; }
   .hero__eyebrow { font-family: 'Arial', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; color: var(--goldMd); text-transform: uppercase; margin-bottom: 24px; }
-  .hero__headline { font-family: 'Arial', sans-serif; font-size: clamp(1.9rem, 5vw, 3.1rem); font-weight: 900; color: var(--white); margin-bottom: 20px; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.2; }
+  .hero__headline { font-family: 'Arial', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--white); margin-bottom: 16px; max-width: 720px; margin-left: auto; margin-right: auto; }
   .hero__headline span { color: var(--gold); }
-  .hero__subhead { font-family: 'Georgia', serif; font-size: 1.15rem; color: #CCCCCC; max-width: 600px; margin: 0 auto 40px; line-height: 1.85; }
+  .hero__subhead { font-family: 'Georgia', serif; font-size: 1.15rem; color: #CCCCCC; max-width: 600px; margin: 0 auto 40px; line-height: 1.75; }
   .hero__meta { display: inline-block; font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--goldMd); margin-top: 20px; letter-spacing: 0.04em; }
   .hero__divider { width: 60px; height: 3px; background: var(--gold); margin: 48px auto 0; }
 
+  /* ── SECTIONS ── */
   .section { padding: 72px 24px; }
-  .section--gold   { background: var(--goldBg); }
-  .section--green  { background: var(--greenBg); }
-  .section--purple { background: var(--purBg); }
-  .section--teal   { background: var(--tealBg); }
-  .section--white  { background: var(--white); }
+  .section--navy  { background: var(--navy); }
+  .section--gold  { background: var(--goldBg); }
+  .section--green { background: var(--greenBg); }
+  .section--purple{ background: var(--purBg); }
+  .section--teal  { background: var(--tealBg); }
+  .section--white { background: var(--white); }
+  .section--dark  { background: var(--navyMid); }
+  .section--darkgreen { background: #0f2318; }
 
   .section__eyebrow { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
   .section__title { font-family: 'Arial', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; margin-bottom: 28px; line-height: 1.2; }
-  .section__body { font-size: 1.05rem; line-height: 1.9; max-width: 720px; }
-  .section__body p { margin-bottom: 1.2em; }
+  .section__body { font-size: 1.05rem; line-height: 1.8; max-width: 720px; }
   .gold-line { width: 64px; height: 3px; background: var(--gold); margin: 20px 0 36px; }
 
-  .pq { border-left: 5px solid var(--gold); padding: 20px 28px; background: var(--white); border-radius: 0 4px 4px 0; margin: 32px 0; font-style: italic; font-size: 1.1rem; color: var(--navy); line-height: 1.75; }
-  .pq--green  { border-left-color: var(--green); color: var(--green); }
+  /* ── PULL QUOTE ── */
+  .pq { border-left: 5px solid var(--gold); padding: 20px 28px; background: var(--white); border-radius: 0 4px 4px 0; margin: 32px 0; font-style: italic; font-size: 1.1rem; color: var(--navy); line-height: 1.7; }
+  .pq--green  { border-left-color: var(--green);  color: var(--green); }
   .pq--purple { border-left-color: var(--purple); color: var(--purple); }
-  .pq--teal   { border-left-color: var(--teal); color: var(--teal); }
-  .pq--dark   { background: rgba(201,168,76,0.08); color: #e8c46a; border-left-color: var(--gold); font-style: normal; }
+  .pq--teal   { border-left-color: var(--teal);   color: var(--teal); }
+  .pq--dark   { background: rgba(201,168,76,0.08); color: #e8c46a; border-left-color: var(--gold); }
 
+  /* ── CARDS ── */
   .cards-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
   @media (min-width: 640px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
   .card { background: var(--white); border-left: 4px solid var(--greenMd); padding: 22px 24px; border-radius: 0 4px 4px 0; }
   .card__label { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--greenMd); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
   .card__body { font-size: 0.97rem; line-height: 1.65; color: var(--body); margin: 0; }
 
-  .chip { border-left: 4px solid var(--green); background: #F4FAF5; padding: 16px 22px; margin-bottom: 14px; border-radius: 0 4px 4px 0; font-size: 1rem; line-height: 1.7; color: var(--body); }
+  /* ── CHIPS ── */
+  .chip { border-left: 4px solid var(--green); background: #F4FAF5; padding: 16px 22px; margin-bottom: 14px; border-radius: 0 4px 4px 0; font-size: 1rem; line-height: 1.65; color: var(--body); }
   .chip::before { content: '✓  '; color: var(--greenMd); font-weight: 700; }
   .chip--no { border-left-color: var(--purple); background: #FAF7FF; }
   .chip--no::before { content: '✕  '; color: var(--purMid); }
 
+  /* ── PRICE BOX ── */
   .price-box { background: var(--navy); border: 2px solid var(--gold); border-radius: 6px; padding: 56px 40px; text-align: center; max-width: 560px; margin: 0 auto; }
   .price-box__eyebrow { font-family: 'Arial', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; color: var(--goldMd); text-transform: uppercase; margin-bottom: 20px; }
   .price-box__amount { font-family: 'Arial', sans-serif; font-size: clamp(4rem, 12vw, 7rem); font-weight: 900; color: var(--white); line-height: 1; margin-bottom: 8px; }
@@ -96,44 +119,42 @@
   .price-box__note { font-family: 'Georgia', serif; font-size: 1rem; color: var(--goldMd); margin-bottom: 8px; }
   .price-box__sub { font-size: 0.9rem; color: #888; margin-bottom: 36px; }
 
+  /* ── STEPS ── */
   .steps { margin-top: 32px; }
-  .step { display: flex; gap: 24px; margin-bottom: 32px; align-items: flex-start; }
+  .step { display: flex; gap: 24px; margin-bottom: 28px; align-items: flex-start; }
   .step__num { flex-shrink: 0; width: 48px; height: 48px; background: var(--gold); color: var(--navy); font-family: 'Arial', sans-serif; font-weight: 900; font-size: 1.3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
   .step__title { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: 6px; }
-  .step__body { font-size: 0.97rem; color: var(--muted); line-height: 1.8; margin: 0; }
+  .step__body { font-size: 0.97rem; color: var(--muted); line-height: 1.7; margin: 0; }
 
+  /* ── CALL BLOCK ── */
   .call-framework { margin-top: 28px; }
-  .call-block { display: flex; gap: 18px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .call-block { display: flex; gap: 18px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
   .call-block:last-child { border-bottom: none; }
   .call-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--green); color: #e8c46a; font-family: 'Arial', sans-serif; font-weight: 900; font-size: 0.9rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-  .call-title { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--goldMd); margin-bottom: 4px; }
-  .call-body { font-size: 0.93rem; color: #a8a09a; line-height: 1.75; margin: 0; }
+  .call-title { font-family: 'Arial', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--green); margin-bottom: 4px; }
+  .call-body { font-size: 0.93rem; color: var(--muted); line-height: 1.65; margin: 0; }
 
-  .wa-section { background: #0f2318; color: #f0ece4; padding: 80px 24px; }
-  .wa-badge {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
-    padding: 10px 20px; border-radius: 2px; margin-bottom: 36px;
-    font-family: 'Arial', sans-serif; font-size: 0.85rem; color: var(--goldMd); letter-spacing: 0.05em;
-  }
-  .wa-badge::before { content: '📞'; font-size: 1rem; }
+  /* ── CTA STRIP ── */
+  .cta-strip { background: var(--gold); padding: 56px 24px; text-align: center; }
+  .cta-strip__headline { font-family: 'Arial', sans-serif; font-weight: 900; font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--navy); margin-bottom: 10px; }
+  .cta-strip__sub { font-family: 'Georgia', serif; font-size: 1rem; color: var(--navyMid); margin-bottom: 28px; }
 
-  .proof-bar { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.3); border-bottom: 1px solid rgba(201,168,76,0.3); padding: 28px 24px; text-align: center; }
-  .proof-bar p { color: var(--goldMd); font-family: 'Arial', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0; }
-
-  .quiz-section { background: #0f2318; border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 60px 24px; }
-  .quiz-section__inner { max-width: 680px; margin: 0 auto; text-align: center; }
-  .quiz-section__eyebrow { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #c9a84c; margin-bottom: 14px; }
-  .quiz-section__title { font-family: 'Arial', sans-serif; font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: #f0ece4; margin-bottom: 16px; line-height: 1.3; }
-  .quiz-section__body { font-family: 'Georgia', serif; font-size: 1rem; color: #a8a09a; line-height: 1.85; margin-bottom: 28px; }
-
-  .cta-strip { background: var(--gold); padding: 64px 24px; text-align: center; }
-  .cta-strip__headline { font-family: 'Arial', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 3.5vw, 2.2rem); color: var(--navy); margin-bottom: 12px; line-height: 1.25; }
-  .cta-strip__sub { font-family: 'Georgia', serif; font-size: 1rem; color: var(--navyMid); margin-bottom: 32px; }
-
+  /* ── SECONDARY CTA BAR ── */
   .cta-bar { background: var(--navyMid); padding: 40px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .cta-bar p { color: var(--offWhite); font-size: 1rem; margin: 0; max-width: 560px; }
 
+  /* ── PROOF BAR ── */
+  .proof-bar { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.3); border-bottom: 1px solid rgba(201,168,76,0.3); padding: 28px 24px; text-align: center; }
+  .proof-bar p { color: var(--goldMd); font-family: 'Arial', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0; }
+
+  /* ── QUIZ ENTRY SECTION ── */
+  .quiz-section { background: #0f2318; border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 52px 24px; }
+  .quiz-section__inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .quiz-section__eyebrow { font-family: 'Arial', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #c9a84c; margin-bottom: 14px; }
+  .quiz-section__title { font-family: 'Arial', sans-serif; font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: #f0ece4; margin-bottom: 16px; line-height: 1.25; }
+  .quiz-section__body { font-family: 'Georgia', serif; font-size: 1rem; color: #a8a09a; line-height: 1.75; margin-bottom: 28px; }
+
+  /* ── FOOTER ── */
   footer { background: var(--navy); border-top: 2px solid rgba(201,168,76,0.4); padding: 40px 24px; text-align: center; }
   footer p { color: #777; font-size: 0.85rem; margin-bottom: 6px; }
   footer a { color: var(--gold); text-decoration: none; }
@@ -144,21 +165,20 @@
     .price-box { padding: 40px 24px; }
     nav { padding: 14px 16px; }
     .btn--large { font-size: 1rem; padding: 16px 28px; }
-    .wa-section { padding: 56px 20px; }
   }
 </style>
 </head>
 <body>
 
-<!-- BANNER -->
+<!-- QUIZ BANNER -->
 <div class="quiz-banner">
-  <p>Not sure if this is right for you? <a href="DWCP-Alignment-Quiz.html">Take the free 5-minute check first →</a></p>
+  <p>Not sure if this is the right step for you? <a href="https://the-dwcp-quiz.vercel.app/">Take the free 4-minute alignment diagnostic first →</a></p>
 </div>
 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">DWCP</a>
-  <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn nav-cta">Get My Diagnostic · ₦10,000</a>
+  <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn nav-cta">Get My Diagnostic — ₦10,000</a>
 </nav>
 
 <!-- HERO -->
@@ -166,13 +186,14 @@
   <div class="container">
     <p class="hero__eyebrow">DWCP Foundation Diagnostic</p>
     <h1 class="hero__headline">
-      You already know digital income is real.<br>
-      <span>What you don't know is which part of it is actually for you.</span>
+      You don't have a hustle problem.<br>
+      <span>You have a direction problem.</span>
     </h1>
     <p class="hero__subhead">
-      Every course you have seen was built by someone who made it work for their own background. None of them know your degree. None of them know your situation. This diagnostic starts with yours. It names the skill that fits, tells you what to do first, and backs it with a 30-minute WhatsApp call so none of it stays on paper.
+      A personalised diagnostic that tells you exactly which digital skill fits your specific wiring,
+      your degree, and your situation — and what to do about it in the next 90 days.
     </p>
-    <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Get My Diagnostic · ₦10,000</a>
+    <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Start My Diagnostic — ₦10,000</a>
     <br>
     <span class="hero__meta">One-time · Pay via Nestuge · Full report + 30-min WhatsApp call · Delivered within 72 hours</span>
     <div class="hero__divider"></div>
@@ -182,7 +203,7 @@
 <!-- PROOF BAR -->
 <div class="proof-bar">
   <div class="container">
-    <p>Written report across 17 sections &nbsp;·&nbsp; The right skill named for you &nbsp;·&nbsp; 30-min WhatsApp call &nbsp;·&nbsp; Olusegun went from lost to 4K LinkedIn followers &nbsp;·&nbsp; Built from your own background, not a template</p>
+    <p>One conversation · One personalised report · One live WhatsApp call · One 90-day plan — built from your specific wiring</p>
   </div>
 </div>
 
@@ -190,44 +211,39 @@
 <section class="section section--gold">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--gold);">The Real Problem</p>
-    <h2 class="section__title" style="color:var(--navy);">It's not that you don't know digital income works.<br>It's that you don't know which part of it is yours.</h2>
+    <h2 class="section__title" style="color:var(--navy);">The confusion is more expensive than you think.</h2>
     <div class="gold-line"></div>
     <div class="section__body">
-      <p>You've seen it. You know people who are building income from digital skills, some of them from your city, some without a degree as good as yours.</p>
-      <p>So it is not the idea that confuses you. It is the match.</p>
-      <p><strong>Every course you will find was built by someone who succeeded in their specific situation. They packaged what worked for them and sold it to you. But their degree is not your degree. Their background is not your background. Their situation is not yours.</strong> You were handed someone else's map and told to find your own way with it.</p>
-      <p>You tried something. Maybe graphic design. Maybe content creation. Maybe you paid for a course, did half of it, and quietly stopped. Maybe you announced what you were doing in January. By March you had dropped it and were back to square one.</p>
-      <p>That was not laziness. You had the drive.</p>
-      <p>The problem was that nobody checked whether that skill actually fit your background before you started. You were following what worked for someone else. Their degree, their thinking style, their situation. Not yours.</p>
-      <p>Every course you will find is built by someone who succeeded in their specific situation. They are selling what worked for them. None of them know your degree. None of them know what you have already tried. None of them know your available time, your environment, or what you actually want to do.</p>
-      <p>This diagnostic starts with your specific situation. And it tells you something specific in return.</p>
-      <div class="pq">"The gap between 'I know digital income works' and 'I am earning digital income' is not effort. It is knowing which skill is actually yours and starting there."</div>
+      <p>You know digital income is real. You have seen other Nigerians building it — some from the same city, some with less impressive CVs than yours. You are not confused about whether it works. You are confused about <em>which part of it works for you.</em></p>
+      <p>That confusion is the reason a graphic design course sits unfinished on your laptop. It is the reason you announced you were going into content creation in January and quietly dropped it by March. It is the reason you have spent money on at least one thing that produced nothing — not because you are lazy, but because the lane did not fit.</p>
+      <p>Every course, every guru, every YouTube video sells you on what worked for them. Nobody has sat down with <em>your specific degree, your specific personality, your specific available time and money</em>, and said: this is the lane, this is why, and this is what you do in the next 90 days. That is what this diagnostic does.</p>
+      <div class="pq">The gap between "I know digital income is real" and "I am earning digital income" is not effort. It is direction. And direction is exactly what a diagnostic produces.</div>
     </div>
   </div>
 </section>
 
-<!-- PRE-DIAGNOSTIC ENTRY -->
+<!-- QUIZ ENTRY SECTION -->
 <div class="quiz-section">
   <div class="quiz-section__inner">
-    <p class="quiz-section__eyebrow">Before You Pay (Free)</p>
-    <h2 class="quiz-section__title">Not sure which of your five areas is holding you back? Find out in 5 minutes.</h2>
-    <p class="quiz-section__body">Take the free check first. 12 questions. You get a score across all five areas: what you studied, what you want to do, your natural strengths, the skills you have built, and what actually pays in today's market. Instant results. No email needed. You will know exactly where the gap is before you spend anything.</p>
-    <a href="DWCP-Alignment-Quiz.html" class="btn btn--dark">Take the Free Check →</a>
-    <p style="margin-top:14px; font-size:0.83rem; color:#a8a09a;">12 questions · 5 minutes · Instant results · No email required</p>
+    <p class="quiz-section__eyebrow">Start Here — Free</p>
+    <h2 class="quiz-section__title">Not sure if your five pillars are aligned? Find out in 4 minutes.</h2>
+    <p class="quiz-section__body">Most people who get the most from this diagnostic have already identified that something specific is misaligned — their degree, their desired direction, their developed skills, or what the economy rewards. The free quiz maps all five for you and tells you exactly where the gap is sitting before you invest in the full diagnostic.</p>
+    <a href="https://the-dwcp-quiz.vercel.app/" class="btn btn--dark">Take the Free Alignment Quiz →</a>
+    <p style="margin-top:14px; font-size:0.83rem; color:#a8a09a;">12 questions · 4 minutes · Instant results · No email required</p>
   </div>
 </div>
 
 <!-- WHAT IT IS NOT -->
 <section class="section section--purple">
   <div class="container">
-    <p class="section__eyebrow" style="color:var(--purMid);">Let's Be Honest First</p>
-    <h2 class="section__title" style="color:var(--purple);">This is not what you have already tried.</h2>
+    <p class="section__eyebrow" style="color:var(--purMid);">Before You Read Further</p>
+    <h2 class="section__title" style="color:var(--purple);">Let's be clear about what this is not.</h2>
     <div class="gold-line" style="background:var(--purMid);"></div>
     <div class="section__body">
-      <div class="chip chip--no">Not a course. There are no videos to watch, no modules to complete, no certificate to add to a CV. One diagnostic. One written report. One real conversation.</div>
-      <div class="chip chip--no">Not generic advice. Your report will not say "content creation is in demand." It will name the specific skill that fits your degree and background, tell you what you can earn from it at 6, 12, and 36 months, and name real companies to contact. Everything comes from your own conversation, not from a template.</div>
-      <div class="chip chip--no">Not a motivational PDF. It will not tell you to believe in yourself. It will tell you the exact mistake most people with your kind of profile make, and what to do before it happens to you.</div>
-      <div class="chip chip--no">Not a shortcut. You will still need to do the work. What changes is that the work will finally be going in the right direction.</div>
+      <div class="chip chip--no">It is not a course. There is no video series to finish, no modules to complete, no certificate at the end that you add to a CV nobody reads.</div>
+      <div class="chip chip--no">It is not generic advice. It will not tell you "content creation is in demand." Everything in your report is written from your specific diagnostic conversation about your specific situation.</div>
+      <div class="chip chip--no">It is not a motivational PDF. It will not tell you to "believe in yourself." It will tell you your wealth conditioning is showing up in a specific way — and name the first move that comes from the truth, not from hope.</div>
+      <div class="chip chip--no">It is not a shortcut to income. You will still have to do the work. What changes is that the work will be in the right direction.</div>
     </div>
   </div>
 </section>
@@ -235,159 +251,96 @@
 <!-- WHAT IT IS -->
 <section class="section section--green">
   <div class="container">
-    <p class="section__eyebrow" style="color:var(--greenMd);">What It Actually Is</p>
-    <h2 class="section__title" style="color:var(--green);">A private report about your own situation, written specifically for you.</h2>
+    <p class="section__eyebrow" style="color:var(--greenMd);">What the Diagnostic Is</p>
+    <h2 class="section__title" style="color:var(--green);">A private intelligence briefing about your own economic future.</h2>
     <div class="gold-line" style="background:var(--greenMd);"></div>
     <div class="section__body">
-      <p>After you pay, you get access to the DWCP Intake Advisor, a GPT-powered conversation that goes through 12 areas with you. Your degree. What you have tried before. How you think. What you do with your time and money. Your environment. Where you want to be in three years.</p>
-      <p>It takes 30 to 50 minutes if you are honest. You can do it in one sitting or come back to it.</p>
-      <p>When you are done, Sochima takes your full conversation and runs it through the DWCP framework. The framework checks five areas in combination: your degree, your natural ability, the skills you have built, what you actually want to do, and what the market will pay for right now. All five together. Not one in isolation. When all five align, the right skill becomes clear. When one is off, every other effort hits a wall. Within 72 hours, you receive a written report built from what you shared, not a generic plan with your name at the top. Then comes the 30-minute WhatsApp call. You read the report first. You come with your questions. Sochima meets you exactly where it left off.</p>
-      <div class="pq pq--green">"One participant received this in her Section 3: 'Lane A: Clinical Credibility Partner. Starting rate: ₦40,000 per article from Month 2. By Month 12: ₦200,000 per month. By Year 3: $3,000 per month.' That plan came from her Physiology degree and how her brain works. She did not know that was possible before the diagnostic."</div>
+      <p>A diagnostic is not a prescription. A prescription tells you what to take. A diagnostic tells you what is actually happening — and then the prescription follows naturally from the truth.</p>
+      <p>After payment, you receive a link to the DWCP Intake Advisor — a GPT-powered conversation that interviews you across 12 areas: your degree, your cognitive wiring, your previous attempts, your money behaviour, your available time, your actual environment, and where you want to be in three years. The conversation adapts to what you reveal as you go. It takes 30 to 50 minutes if you are honest, and you can complete it across two sessions.</p>
+      <p>When you finish, the GPT compiles your answers into a structured document. Sochima Akujuo feeds that into the DWCP analytical framework. Seventy-two hours later, you receive a full written report built specifically for your situation. Then you get on a 30-minute WhatsApp call — you have already read the report, you arrive with specific questions, and Sochima walks you through what it means for your next move.</p>
+      <div class="pq pq--green">One participant received this in her Section 3: "Lane A — Clinical Credibility Partner. Entry: ₦40,000 per article at Month 2. Twelve months: ₦200,000 per month. Three years: $3,000 per month." That is not a dream. That is a plan built from her Physiology degree and her specific wiring. She did not know any of that before the diagnostic.</div>
       <div style="text-align:center; margin-top:36px;">
-        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">I Want to Know My Own Direction via Nestuge</a>
+        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">I Want This Clarity — Pay via Nestuge</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROOF: REAL PEOPLE, REAL RESULTS -->
-<section class="section section--white">
-  <div class="container">
-    <p class="section__eyebrow" style="color:var(--greenMd);">Before and After</p>
-    <h2 class="section__title" style="color:var(--navy);">What actually changes when someone looks at your specific situation.</h2>
-    <div class="gold-line"></div>
-    <div class="section__body">
-      <p>These are not testimonials written for a page. These are real WhatsApp conversations. Real people who came without a clear direction and left with one.</p>
-    </div>
-
-    <!-- Olusegun case study -->
-    <div style="margin:48px 0; background:var(--goldBg); border-left:4px solid var(--gold); padding:32px; border-radius:0 4px 4px 0;">
-      <p style="font-family:'Arial',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Olusegun O. &nbsp;·&nbsp; Ondo State, Nigeria</p>
-      <p style="font-size:1.05rem; color:var(--body); line-height:1.85; margin-bottom:14px;">He reached out after Sochima gave him LinkedIn tips. He had been researching, tweaking his profile, reading for days. Still did not have a clear direction. <strong>One conversation later</strong>, he had a lane. The screenshot on the right is his LinkedIn today.</p>
-      <p style="font-size:0.97rem; color:var(--muted); line-height:1.85; margin-bottom:28px; font-style:italic;">Brand Storyteller. Content Writer. Ghost writer. Lecturer. 4,000 followers. That is not a course result. That is what happens when someone finally shows you which direction is yours.</p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:560px;">
-        <div>
-          <p style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:8px;">Before the conversation</p>
-          <img src="olusegun-before.jpg.webp" alt="Olusegun asking Sochima for direction on WhatsApp" style="width:100%; border:1px solid rgba(0,0,0,0.1); border-radius:3px; display:block;">
-        </div>
-        <div>
-          <p style="font-family:'Arial',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:8px;">His LinkedIn today</p>
-          <img src="olusegun-after.jpg.webp" alt="Olusegun's LinkedIn profile showing 4K followers and clear brand" style="width:100%; border:1px solid rgba(0,0,0,0.1); border-radius:3px; display:block;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Nancy + Luciana -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:40px; align-items:start;">
-      <div>
-        <img src="nancy.jpg.webp" alt="Nancy's WhatsApp message about earning without a white collar job" style="width:100%; border:1px solid rgba(0,0,0,0.08); border-radius:3px; margin-bottom:16px; display:block;">
-        <p style="font-family:'Arial',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--greenMd); margin-bottom:8px;">Nancy</p>
-        <p style="font-size:1rem; color:var(--navy); font-style:italic; line-height:1.75; margin-bottom:10px;">"Wow... I really need to work on this. It will make me able to earn from anywhere without doing a white collar thing."</p>
-        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7;">Not a course result. One conversation that showed her what was already in her background.</p>
-      </div>
-      <div>
-        <img src="luciana.jpg.webp" alt="Luciana asking how to start and saying she does not want to waste another year" style="width:100%; border:1px solid rgba(0,0,0,0.08); border-radius:3px; margin-bottom:16px; display:block;">
-        <p style="font-family:'Arial',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--greenMd); margin-bottom:8px;">Luciana</p>
-        <p style="font-size:1rem; color:var(--navy); font-style:italic; line-height:1.75; margin-bottom:10px;">"I don't want to waste another year. I'll be in law school but I need to get myself ready for the life ahead."</p>
-        <p style="font-size:0.9rem; color:var(--muted); line-height:1.7;">Law school ahead. Career to build at the same time. She did not need more content. She needed one clear direction built from her specific situation.</p>
-      </div>
-    </div>
-
-    <!-- Mercy -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:20px; align-items:start;">
-      <img src="mercy testimonial.jpg.webp" alt="Mercy's thank you message after her session with Sochima" style="width:100%; max-width:320px; border:1px solid rgba(0,0,0,0.08); border-radius:3px; display:block;">
-      <div style="padding-top:8px;">
-        <p style="font-family:'Arial',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--greenMd); margin-bottom:12px;">Mercy F.</p>
-        <p style="font-size:1.05rem; color:var(--navy); font-style:italic; line-height:1.8; margin-bottom:14px;">"I want to say a very big thank you for coming to see me today and also for the wonderful chat we had. Thank you, I truly appreciate."</p>
-        <p style="font-size:0.9rem; color:var(--muted); line-height:1.75;">She sent this the same evening the conversation ended. Not after a programme. Not after a course. After one honest session about her situation.</p>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:44px;">
-      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">I Want This for My Own Situation · ₦10,000</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- 17-SECTION REPORT -->
+<!-- WHAT YOU GET: REPORT -->
 <section class="section section--teal">
   <div class="container--wide">
-    <p class="section__eyebrow" style="color:var(--teal);">What You Get, Part One</p>
-    <h2 class="section__title" style="color:var(--navy); max-width:680px;">The Written Report. 6,200 to 8,500 words. 17 sections. Every section is about your situation specifically.</h2>
+    <p class="section__eyebrow" style="color:var(--teal);">What You Get</p>
+    <h2 class="section__title" style="color:var(--navy); max-width:680px;">Part One — The Personalised Report (6,200–8,500 words across 17 sections)</h2>
     <div class="gold-line" style="background:var(--teal);"></div>
-    <p style="max-width:680px; font-size:1rem; color:var(--body); margin-bottom:36px; line-height:1.85;">Sochima reviews every report before it goes out. Nothing is copied from a template. Here is what those 17 sections cover:</p>
+    <p style="max-width:680px; font-size:1rem; color:var(--body); margin-bottom:32px;">Produced from your diagnostic conversation and reviewed by Sochima before delivery. Not a template with your name inserted. Every section references specific answers from your conversation.</p>
     <div class="cards-grid">
-      <div class="card"><p class="card__label">Section 0: How Wealth Actually Works</p><p class="card__body">The five things wealth is built from. Why effort alone is not the problem. The frame your whole report is built on.</p></div>
-      <div class="card"><p class="card__label">Section 1: Where You Are Right Now</p><p class="card__body">Your exact position in the journey from working to building. What is keeping you at this stage and the one thing that moves you past it.</p></div>
-      <div class="card"><p class="card__label">Section 2: What Money Means to You</p><p class="card__body">The beliefs about money you picked up from your family and your environment. Which one is most likely to sabotage your first 90 days.</p></div>
-      <div class="card"><p class="card__label">Section 3: Your Skill Options</p><p class="card__body">Three to five real ways to earn from your background. What you can make at 6, 12, and 36 months. The high-paying version of your path. AI tools that speed up your output. Real companies to contact, by name.</p></div>
-      <div class="card"><p class="card__label">Section 4: Your Strengths, Made Useful</p><p class="card__body">Three to four strengths pulled from your conversation. For each one: a specific action that turns it into something people will pay for.</p></div>
-      <div class="card"><p class="card__label">Section 5: Your Weaknesses, Honestly</p><p class="card__body">Where you are most likely to slow yourself down. For each weakness: a real book, a specific practice, a community that helps. You leave with an actual reading list.</p></div>
-      <div class="card"><p class="card__label">Section 6: What Your Degree Is Actually Worth</p><p class="card__body">Whether your degree should be front and centre or used quietly as an advantage. The exact words to use on LinkedIn and in introductions. In 2026, a clinical, legal, or technical degree protects you from things AI cannot do.</p></div>
-      <div class="card"><p class="card__label">Section 7: Where Your Time and Money Are Going</p><p class="card__body">How you are spending your four resources: money, energy, attention, time. Where the biggest leak is. One specific move you can make this week to redirect it.</p></div>
-      <div class="card"><p class="card__label">Section 8: The Advantage You Are Not Using</p><p class="card__body">The most valuable thing about your background that your current path is completely wasting. How using it properly raises what you can charge by five to ten times.</p></div>
-      <div class="card"><p class="card__label">Section 9: Why People Are Not Paying You Yet</p><p class="card__body">The gap between what you can do and what people can see. The one move that closes it in the next 30 days. Not a long project. One move.</p></div>
-      <div class="card"><p class="card__label">Section 10: The Mindset Work You Need</p><p class="card__body">Where you are in the journey from employee to builder. The identity shift that has to happen before your first client meeting goes well.</p></div>
-      <div class="card"><p class="card__label">Section 11: Your First Offer, Designed</p><p class="card__body">What a generic offer looks like vs what your positioned offer looks like, side by side. Three versions: entry-level, packaged, and B2B high-value. Two different routes to your first client, with timelines for each.</p></div>
-      <div class="card"><p class="card__label">Section 12: Your 90-Day Learning Plan</p><p class="card__body">Three phases. Specific books, publications to study, and companies named directly. If you are in NYSC: your timeline is addressed specifically: when to start and what to build before you begin posting.</p></div>
-      <div class="card"><p class="card__label">Section 13: The Trap Waiting for You</p><p class="card__body">The one mistake that most commonly takes someone with your profile sideways. Pulled from your conversation. Named before it happens. What to do instead.</p></div>
-      <div class="card"><p class="card__label">Section 14: Your First 30 Days</p><p class="card__body">Three numbered moves. Specific enough to start tomorrow without asking any more questions. At least one of them builds something that belongs to you, regardless of what any platform does.</p></div>
-      <div class="card"><p class="card__label">Section 15: What This Report Does Not Know</p><p class="card__body">What the report is uncertain about. The one area where you need to do some honest work before spending money on anything else. A report that claims to know everything is not a real report.</p></div>
-      <div class="card"><p class="card__label">Section 16: What Comes After This</p><p class="card__body">The DWCP Guided Programme: what it is, what you leave with, and the rate that is only available to people who have done the diagnostic. If the report gives you everything you need to go alone, go alone.</p></div>
+      <div class="card"><p class="card__label">Section 0 — The Wealth Mechanics</p><p class="card__body">The five currencies of wealth, the platform extraction model, and why no one is born poor — only misaligned. The economic frame your report is built on.</p></div>
+      <div class="card"><p class="card__label">Section 1 — Where You Actually Are</p><p class="card__body">Your precise position on the Worker-to-Wealth Spectrum. Which Logic you are in and the single thing blocking the next one.</p></div>
+      <div class="card"><p class="card__label">Section 2 — Your Wealth Conditioning</p><p class="card__body">The money beliefs inherited from family and community that are already shaping your decisions — and the pattern most likely to derail your first 90 days.</p></div>
+      <div class="card"><p class="card__label">Section 3 — Your Skill Options</p><p class="card__body">Three to five viable income lanes built from your profile. Income ceilings at 6, 12, and 36 months. The high-ticket version of your lane. Specific AI tools that multiply your output. Real companies to contact by name.</p></div>
+      <div class="card"><p class="card__label">Section 4 — Your Strengths Amplified</p><p class="card__body">Three to four specific strengths from your conversation — not generic. For each: one specific action that converts it into a commercial asset.</p></div>
+      <div class="card"><p class="card__label">Section 5 — Your Weakness Map</p><p class="card__body">Specific weaknesses with lane-specific consequences. For each: a real book, a specific drill, a relevant community. You leave with a reading list and a practice list.</p></div>
+      <div class="card"><p class="card__label">Section 6 — Degree Leverage vs. Moat</p><p class="card__body">Whether your degree should be front-facing or held as an invisible quality advantage. The exact words for your LinkedIn headline and pitch. In 2026, a clinical, legal, or technical degree is a moat against AI hallucination.</p></div>
+      <div class="card"><p class="card__label">Section 7 — Your MEAT Audit</p><p class="card__body">How you are deploying your four currencies — Money, Energy, Attention, Time. The primary leak. One specific, executable reallocation move for this week.</p></div>
+      <div class="card"><p class="card__label">Section 8 — The Leverage You're Not Using</p><p class="card__body">The highest-value element of your backstory your current path is completely wasting. How it raises your pricing power by five to ten times versus a generic entrant.</p></div>
+      <div class="card"><p class="card__label">Section 9 — Your Credibility Gap</p><p class="card__body">The gap between what you can do and what the market currently sees. The single highest-leverage action to close it in the next 30 days — one move, not a project.</p></div>
+      <div class="card"><p class="card__label">Section 10 — Your Mindset Rewire</p><p class="card__body">Your Cashflow Quadrant position. The Hollow Corporation check. The identity shift required before the first client meeting.</p></div>
+      <div class="card"><p class="card__label">Section 11 — Your Offer Design</p><p class="card__body">The positioned offer — generic vs. positioned side by side. Three-tier packaging: entry service, productized offer, B2B high-ticket. LinkedIn content vs. B2B outreach as two separate motions with separate timelines.</p></div>
+      <div class="card"><p class="card__label">Section 12 — Your 90-Day Skill Build Path</p><p class="card__body">Three phases with specific books, publications to study, and companies named by name. NYSC students: your timeline addressed specifically — when to start and what to build before posting begins.</p></div>
+      <div class="card"><p class="card__label">Section 13 — The Trap Waiting For You</p><p class="card__body">One trap from the DWCP catalog — the pattern most likely to take your specific profile sideways. Named with evidence from your conversation. The specific counter-move.</p></div>
+      <div class="card"><p class="card__label">Section 14 — Your First 30 Days</p><p class="card__body">Three numbered moves. Each specific enough to begin tomorrow without asking any clarifying questions. At least one builds something you own regardless of what any platform does.</p></div>
+      <div class="card"><p class="card__label">Section 15 — The Honest Caveat</p><p class="card__body">What the report is uncertain about. The single piece of self-work to do before spending money on the next step. A diagnostic that claims to know everything is not a diagnostic.</p></div>
+      <div class="card"><p class="card__label">Section 16 — Where This Goes Next</p><p class="card__body">The DWCP Guided Programme — what it is, what you walk out with, and the founding rate for diagnostic buyers. If the report gives you everything you need to act alone, act alone.</p></div>
     </div>
-    <div style="text-align:center; margin-top:44px;">
-      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Get All 17 Sections · ₦10,000 via Nestuge</a>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Get All 17 Sections — ₦10,000 via Nestuge</a>
     </div>
   </div>
 </section>
 
-<!-- WHATSAPP CALL -->
-<section class="wa-section">
+<!-- PART TWO: WHATSAPP CALL -->
+<section class="section section--purple">
   <div class="container">
-    <p class="section__eyebrow" style="color:var(--gold); font-family:'Arial',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:12px;">What You Get, Part Two</p>
-    <div class="wa-badge">30 minutes · One-to-one · On WhatsApp · Included with every diagnostic</div>
-    <h2 style="font-family:'Arial',sans-serif; font-size:clamp(1.6rem, 3.5vw, 2.4rem); font-weight:900; color:#f0ece4; margin-bottom:28px; line-height:1.2;">After you read your report, you get to talk to Sochima directly.</h2>
-    <div class="gold-line"></div>
-    <div style="font-size:1.05rem; line-height:1.9; max-width:720px; color:#a8a09a;">
-      <p>Most reports get read once and forgotten. Not because they are not useful. Because there is nobody to talk to about the questions they raise.</p>
-      <p>That does not happen here.</p>
-      <p>After your report arrives, Sochima schedules a 30-minute WhatsApp call, voice or video, your choice. You read all 17 sections first. Then you come with your questions. <strong style="color:#f0ece4;">That changes everything about what happens on the call.</strong></p>
-      <p>It is not a one-sided walkthrough. It is a real conversation. You push back on anything you disagree with. You ask about the specific thing the report raised that you are not sure how to handle in your situation. Sochima meets you exactly where the report left you.</p>
-      <div class="pq pq--dark">"The report tells you what is happening. The call tells you what to do with it, for your specific situation, not the general answer."</div>
-      <p>The call has four parts. Nothing is wasted.</p>
+    <p class="section__eyebrow" style="color:var(--purMid);">Part Two</p>
+    <h2 class="section__title" style="color:var(--purple);">The Post-Report WhatsApp Call (30 minutes)</h2>
+    <div class="gold-line" style="background:var(--purMid);"></div>
+    <div class="section__body">
+      <p>After you have read your report, Sochima schedules a free 30-minute WhatsApp call — voice or video, your preference — within 72 hours. You arrive having already read the full report. That changes everything.</p>
+      <p>Instead of a one-sided walkthrough, it becomes a conversation. You name what landed hardest. You push back on whatever you disagree with. You ask the specific question the report raised but could not answer about your particular situation. Sochima meets you exactly where the report left you.</p>
+      <div class="pq pq--purple">The report tells you what the diagnostic found. The call tells you what to do with it first — for your specific situation, not the general case.</div>
+      <p>The call follows a four-block structure:</p>
       <div class="call-framework">
         <div class="call-block">
           <div class="call-num">1</div>
           <div>
-            <p class="call-title">What landed hardest (2 to 3 minutes)</p>
-            <p class="call-body">What in the report hit you the most? What do you want to push back on? You lead. Sochima listens before speaking.</p>
+            <p class="call-title">Opening check (2–3 min)</p>
+            <p class="call-body">What landed hardest in the report? What do you want to push back on? You lead.</p>
           </div>
         </div>
         <div class="call-block">
           <div class="call-num">2</div>
           <div>
-            <p class="call-title">Go deeper (10 to 12 minutes)</p>
-            <p class="call-body">Whichever section you want to go further on, that is where Sochima goes. This is where the report gets applied to your specific reality: your timeline, your location, your actual resources.</p>
+            <p class="call-title">Deep dive (10–12 min)</p>
+            <p class="call-body">Sochima follows your lead into whichever section raised the most questions. This is where the report gets applied to your specific constraints.</p>
           </div>
         </div>
         <div class="call-block">
           <div class="call-num">3</div>
           <div>
-            <p class="call-title">Your first 30 days (8 to 10 minutes)</p>
-            <p class="call-body">Not a general intention. A specific first move: something you can start the morning after the call without waiting for anything else to be ready first.</p>
+            <p class="call-title">First 30 days (8–10 min)</p>
+            <p class="call-body">A specific Day 1 commitment — not a general intention. Something you can begin the morning after the call without needing anything else to be in place first.</p>
           </div>
         </div>
         <div class="call-block">
           <div class="call-num">4</div>
           <div>
-            <p class="call-title">The honest close (2 to 3 minutes)</p>
-            <p class="call-body">You name the one thing most likely to stop you from starting. Sochima names the counter to it. That is the last thing you hear. By design.</p>
+            <p class="call-title">Closing (2–3 min)</p>
+            <p class="call-body">You name the one thing most likely to stop execution. Sochima names the counter to it. That is the last thing you hear from the call.</p>
           </div>
         </div>
       </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">Get the Report + Call · ₦10,000</a>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">Get Report + Call — ₦10,000</a>
       </div>
     </div>
   </div>
@@ -397,16 +350,16 @@
 <section class="section section--green">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--greenMd);">Who This Is For</p>
-    <h2 class="section__title" style="color:var(--green);">Read each of these slowly.</h2>
+    <h2 class="section__title" style="color:var(--green);">Read this slowly.</h2>
     <div class="gold-line" style="background:var(--greenMd);"></div>
     <div class="section__body">
-      <div class="chip">You finished school and people immediately started asking "so what are you doing now?" "when will you start supporting the house?" And you did not have a clear answer, not because you were not thinking about it, but because nobody had ever helped you figure out the right direction for your specific background.</div>
-      <div class="chip">You have tried at least one digital skill. It did not go the way you hoped. You are not sure if the problem was the skill, or the way you approached it, or something else entirely. That question has been sitting unanswered.</div>
-      <div class="chip">You scroll LinkedIn or Instagram and it looks like everyone you went to school with has figured something out. Someone just got a remote job. Someone relocated. Someone is posting about their clients. You are still in the "figuring it out" stage and the gap is starting to feel uncomfortable.</div>
-      <div class="chip">You have a job. It pays. But it has nothing to do with what you actually want to build. You can see the ceiling. You know there is a way out. You just do not know which door is yours.</div>
-      <div class="chip">You are in the diaspora. You earn in pounds or dollars. You are starting to realise that earning in foreign currency and actually building something are two very different things.</div>
+      <div class="chip">You finished a degree that JAMB chose, your parents chose, or a younger version of you chose without enough information. You know it is not the full picture of what you are capable of.</div>
+      <div class="chip">You know digital income is real. You have tried something — a course, a business, a freelance attempt. It did not go the way you expected. You are not sure if that is because of you or because of the lane.</div>
+      <div class="chip">You are finishing your degree or in your first one or two years of working. You feel the gap clearly. You want a map, not a motivational speech.</div>
+      <div class="chip">You are 27 to 38, you have a job, it pays, and something about the ceiling is visible to you. You know there is an exit ramp. You just do not know which one is yours.</div>
+      <div class="chip">You are in the diaspora. You earn in dollars or pounds. You are starting to realise that "I earn in a hard currency" is not the same as "I am building wealth."</div>
       <div style="text-align:center; margin-top:36px;">
-        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">This Is Me. Start My Diagnostic</a>
+        <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">This Is Me — Start My Diagnostic</a>
       </div>
     </div>
   </div>
@@ -416,12 +369,12 @@
 <section class="section section--white">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--purMid);">Who This Is Not For</p>
-    <h2 class="section__title" style="color:var(--purple);">Be honest with yourself here.</h2>
+    <h2 class="section__title" style="color:var(--purple);">The diagnostic is honest. So is this section.</h2>
     <div class="gold-line" style="background:var(--purMid);"></div>
     <div class="section__body">
-      <div class="chip chip--no">You already have a skill, paying clients, and a clear direction. What you need is a plan for growing what is already working, not a diagnostic.</div>
-      <div class="chip chip--no">You want someone to tell you that you are doing fine. This report will tell you the truth. If you are heading into a mistake, it will say so directly. If you cannot handle honest feedback, this is not for you.</div>
-      <div class="chip chip--no">You are looking for something to buy instead of something to do. The report gives you a 90-day plan. The plan requires you to actually start. If you are not going to begin Phase 1 within 72 hours of getting the report, save your ₦10,000 until you are ready.</div>
+      <div class="chip chip--no">You already have a lane, paying clients, and a positioning statement that works. You need a scaling system, not a diagnostic.</div>
+      <div class="chip chip--no">You want someone to tell you that you are doing fine. This report will tell you the truth. If you are about to fall into a trap pattern, it will say so — specifically and without apology.</div>
+      <div class="chip chip--no">You are looking for something to buy instead of something to do. The diagnostic produces a 90-day plan. The plan requires execution. If you are not ready to start Phase 1 within 72 hours of receiving the report, save the ₦10,000 until you are.</div>
     </div>
   </div>
 </section>
@@ -430,21 +383,20 @@
 <section class="section section--gold">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--gold);">The ₦10,000 Question</p>
-    <h2 class="section__title" style="color:var(--navy);">Here is what ₦10,000 is actually buying.</h2>
+    <h2 class="section__title" style="color:var(--navy);">Why this price. Why now.</h2>
     <div class="gold-line"></div>
     <div class="section__body" style="margin-bottom:40px;">
-      <p>A written report about your own situation. Built from your specific conversation. 17 sections. Reviewed by Sochima before it reaches you.</p>
-      <p>Plus 30 minutes on WhatsApp. Not a group session. Not a general Q&A. Thirty minutes on your situation: your skill, your first move, the obstacles that are specific to where you are right now.</p>
-      <p>₦10,000 is less than what most people have already spent on a course that did not tell them whether the skill it was teaching actually fit their background.</p>
-      <p>It is less than the cost of one more month of trying things in the wrong direction.</p>
-      <p>There is a principle in the DWCP framework called the Tourniquet: money that is never used to build anything slowly loses its value: to inflation, to impulse spending, to the cost of staying stuck. Spending ₦10,000 to finally get clear on what you are building is itself the first move toward building it.</p>
+      <p>₦10,000 is not a lot of money for a personalised intelligence briefing about your own economic future. It is also not free. That distinction is intentional.</p>
+      <p>Below ₦18,000 — the lowest-tier affiliate course in the Nigerian digital space — so this is not in the same category. Not competing for the same buyer decision.</p>
+      <p>High enough that the real commitment is the conversation, not the price. How you approach the diagnostic intake is the first data point about how you will approach everything else.</p>
+      <p>There is a principle in the DWCP curriculum called the Tourniquet: money that is never deployed toward building anything eventually loses its value entirely — to inflation, to stagnation, or to impulse spending. Deploying ₦10,000 into clarity about your own wealth is itself the first wealth-creation move.</p>
     </div>
     <div class="price-box">
       <p class="price-box__eyebrow">DWCP Foundation Diagnostic</p>
       <div class="price-box__amount"><span>₦</span>10,000</div>
-      <p class="price-box__note">One-time · No upsells · No renewals</p>
-      <p class="price-box__sub">Written report (17 sections) + 30-min WhatsApp call · Delivered within 72 hours · Secure payment via Nestuge</p>
-      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Pay via Nestuge. Start Now</a>
+      <p class="price-box__note">One-time · No upsells · No auto-renewals</p>
+      <p class="price-box__sub">Full report (17 sections) + 30-min WhatsApp call · Delivered within 72 hours · Secure payment via Nestuge</p>
+      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Pay via Nestuge — Start Now</a>
     </div>
   </div>
 </section>
@@ -453,47 +405,47 @@
 <section class="section section--white">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--greenMd);">What Happens After You Pay</p>
-    <h2 class="section__title" style="color:var(--navy);">Five steps. No confusion. Everything delivered within 72 hours.</h2>
+    <h2 class="section__title" style="color:var(--navy);">Five steps. Full delivery within 72 hours of your conversation being complete.</h2>
     <div class="gold-line"></div>
     <div class="steps">
       <div class="step">
         <div class="step__num">1</div>
-        <div>
+        <div class="step__content">
           <p class="step__title">Pay ₦10,000 via Nestuge.</p>
-          <p class="step__body">As soon as payment is confirmed, you receive the link to the DWCP Intake Advisor. No waiting. No form to fill before you pay.</p>
+          <p class="step__body">Payment is first. Immediately after confirmation you receive the DWCP Intake Advisor link — your personal GPT diagnostic conversation. No waiting. No form to fill before you pay.</p>
         </div>
       </div>
       <div class="step">
         <div class="step__num">2</div>
-        <div>
+        <div class="step__content">
           <p class="step__title">Complete the diagnostic conversation.</p>
-          <p class="step__body">The Intake Advisor is a GPT conversation that takes you through 12 areas: your degree, what you have tried before, how you work, what you do with your money, your available time, your environment, and where you want to be in three years. Takes 30 to 50 minutes if you are honest. You can do it in one sitting or finish it later. When you are done, you share the compiled record with Sochima through the link provided.</p>
+          <p class="step__body">The DWCP Intake Advisor is a GPT-powered interview across 12 areas: your degree, your wiring, your attempts, your money behaviour, your time and energy, and where you want to be. Takes 30 to 50 minutes if you are honest. You can do it in one sitting or return and pick up where you stopped. When you finish, the GPT compiles your answers into a structured document — you share it with Sochima via the link provided.</p>
         </div>
       </div>
       <div class="step">
         <div class="step__num">3</div>
-        <div>
-          <p class="step__title">Sochima builds your report.</p>
-          <p class="step__body">Your conversation goes into the DWCP framework. The full 17-section report is written, reviewed, and formatted. Sochima reads everything before it leaves. The review takes at least 25 minutes. It is not rushed.</p>
+        <div class="step__content">
+          <p class="step__title">The diagnostic engine runs and the report is prepared.</p>
+          <p class="step__body">Sochima feeds your compiled conversation into the DWCP analytical framework. The full 17-section report is generated, reviewed, and formatted. The QA pass is not rushed — it is the most important 25 minutes of the process.</p>
         </div>
       </div>
       <div class="step">
         <div class="step__num">4</div>
-        <div>
-          <p class="step__title">You receive your report. You book the call.</p>
-          <p class="step__body">An email with your Google Doc link and a WhatsApp scheduling link. Read the full report first, all 17 sections. Then book the call with the two or three things you most want to go deeper on. That is when the call becomes useful.</p>
+        <div class="step__content">
+          <p class="step__title">You receive your report and schedule your call.</p>
+          <p class="step__body">An email with the Google Doc link and a WhatsApp scheduling link. Read the full report first — all 17 sections. Then come to the call with the two or three things you most want to go deeper on. That is when the call becomes genuinely useful.</p>
         </div>
       </div>
       <div class="step">
         <div class="step__num">5</div>
-        <div>
-          <p class="step__title">You start Move 1 from Section 14 the morning after your call.</p>
-          <p class="step__body">Not next week. Not when things feel right. The morning after. The first move requires no money, no existing audience, and no track record. It only requires 90 minutes redirected from something that was not building anything.</p>
+        <div class="step__content">
+          <p class="step__title">You begin Move 1 from Section 14 the next morning.</p>
+          <p class="step__body">Not next week. Not when you feel ready. The next morning. The first move is achievable with no capital, no existing audience, and no existing track record. All it requires is 90 minutes redirected from something that was not building anything.</p>
         </div>
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
-      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">I'm Ready. Pay via Nestuge</a>
+      <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">I'm Ready — Pay via Nestuge</a>
     </div>
   </div>
 </section>
@@ -502,33 +454,32 @@
 <section class="section section--teal">
   <div class="container">
     <p class="section__eyebrow" style="color:var(--teal);">One More Thing</p>
-    <h2 class="section__title" style="color:var(--navy);">The digital skills space will keep selling you what worked for someone else.</h2>
+    <h2 class="section__title" style="color:var(--navy);">The digital skills space is full of people who will sell you a lane without knowing your wiring.</h2>
     <div class="gold-line" style="background:var(--teal);"></div>
     <div class="section__body">
-      <p>Every course was built by somebody who made it work in their situation. They are selling that situation to you. They do not know your degree. They do not know what you have tried. They do not know your location, your family situation, your available hours, or what you actually want to do.</p>
-      <p>This diagnostic does the opposite. It starts with your situation. Your specific combination of background, natural ability, skills, and what the market will actually pay for, in combination. And it produces a direction that fits your specific combination. Not a direction it is hoping fits.</p>
-      <p>72 hours. ₦10,000. 17 sections. One 30-minute call.</p>
-      <p>Stop guessing. Start building in the right direction.</p>
-      <div class="pq pq--teal">"Rich men negotiate. Middle class bargain. Poor men beg. The first negotiation is with your own clarity about what you are building. This diagnostic is that negotiation made clear."</div>
+      <p>A course that worked for the seller. A business model that worked in a different market. A skill that is genuinely high-income — for someone else.</p>
+      <p>The DWCP diagnostic does the opposite. It starts with you. Your specific combination of domain knowledge, cognitive style, risk tolerance, available time, and economic situation. And it produces a direction that fits that specific combination — not a direction it is hoping fits.</p>
+      <p>Seventy-two hours. ₦10,000. One full report. One live 30-minute call. Everything you need to stop guessing and start building in the right direction.</p>
+      <div class="pq pq--teal">Rich men negotiate. Middle class bargain. Poor men beg. The first negotiation is with your own clarity about what you are building. This diagnostic is that negotiation made explicit.</div>
     </div>
   </div>
 </section>
 
-<!-- MAIN CTA -->
+<!-- MAIN CTA STRIP -->
 <div class="cta-strip">
   <div class="container">
-    <h2 class="cta-strip__headline">Stop guessing which skill is yours.<br>Find out. Then build.</h2>
-    <p class="cta-strip__sub">₦10,000 · Secure payment via Nestuge · Written report + 30-min WhatsApp call · Delivered within 72 hours</p>
+    <h2 class="cta-strip__headline">Stop guessing. Start building in the right direction.</h2>
+    <p class="cta-strip__sub">₦10,000 · Secure payment via Nestuge · Full report + 30-min WhatsApp call · Delivered within 72 hours</p>
     <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn btn--large">Get My DWCP Diagnostic Now</a>
   </div>
 </div>
 
-<!-- SECONDARY CTA -->
+<!-- SECONDARY CTA BAR -->
 <div class="cta-bar">
-  <p>Not ready to pay yet? Take the free 5-minute check first. Find out exactly which of your five areas is creating the gap before you invest anything.</p>
+  <p>Not ready to pay yet? Take the free 4-minute alignment quiz and find out exactly where your five pillars are misaligned.</p>
   <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
-    <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">Pay via Nestuge · ₦10,000</a>
-    <a href="DWCP-Alignment-Quiz.html" class="btn btn--outline">Take the Free Check First →</a>
+    <a href="https://nestuge.com/pay/dwcp-diagnostic" class="btn">Pay via Nestuge — ₦10,000</a>
+    <a href="https://the-dwcp-quiz.vercel.app/" class="btn btn--outline">Take the Free Quiz First →</a>
   </div>
 </div>
 
@@ -537,8 +488,8 @@
   <div class="container">
     <p style="color:var(--gold); font-family:Arial,sans-serif; font-weight:900; font-size:1.3rem; letter-spacing:0.05em; margin-bottom:12px;">DWCP</p>
     <p>Digital Wealth Creation Project · Sochima Akujuo</p>
-    <p><a href="https://nestuge.com/pay/dwcp-diagnostic">Pay via Nestuge</a> &nbsp;·&nbsp; <a href="mailto:hello@dwcp.co">hello@dwcp.co</a> &nbsp;·&nbsp; <a href="DWCP-Alignment-Quiz.html">Free 5-Minute Check</a></p>
-    <p style="margin-top:20px; font-size:0.78rem; color:#555;">The DWCP Foundation Diagnostic is a personalised advisory product, not a course. Results depend on the quality of your diagnostic conversation and your follow-through on the plan. No income guarantees are made or implied.</p>
+    <p><a href="https://nestuge.com/pay/dwcp-diagnostic">Pay via Nestuge</a> · <a href="mailto:hello@dwcp.co">hello@dwcp.co</a> · <a href="https://the-dwcp-quiz.vercel.app/">Free Alignment Quiz</a></p>
+    <p style="margin-top:20px; font-size:0.78rem; color:#555;">The DWCP Foundation Diagnostic is a personalised advisory product, not a course. Results depend on the quality of your diagnostic conversation and the execution of your plan. No income guarantees are made or implied.</p>
   </div>
 </footer>
 
